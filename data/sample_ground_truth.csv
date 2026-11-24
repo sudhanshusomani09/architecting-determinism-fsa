@@ -1,0 +1,7 @@
+doc_id,macro_zone,component,auditor_query
+OBS_0001,Utility,Isolation Valve,butterfly valve suction header fire pump
+OBS_0003,Utility,Portable Fire Extinguisher (Foam type),missing foam pfe dg room diesel
+OBS_0005,Utility,Automatic Sprinkler System,water sprinkler above electrical panel substation
+OBS_0006,Utility,Automatic Fire Detection & Alarm System,fdas smoke detector missing beam pocket mcc
+OBS_0008,Process,Beam Detector,high ceiling 14m point smoke detector hangar
+OBS_0010,Utility,Hydrogen Detection System,no h2 gas detector ups battery room

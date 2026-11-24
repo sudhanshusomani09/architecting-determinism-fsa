@@ -1,0 +1,182 @@
+[
+    {
+        "facility_metadata": {
+            "facility_name": "Facility Alpha (Industrial Manufacturing)",
+            "hazard_classification": "Group G-2 (Moderate Hazard Industrial)"
+        },
+        "macro_zone": "Utility",
+        "micro_area": "FIRE WATER PUMP ROOM (LINE-1)",
+        "clean_micro_area": "Fire Water Pump Room",
+        "component": "Isolation Valve",
+        "component_category": "Pump Room Fittings & Piping",
+        "observation": "Butterfly valves were installed on the suction header of the main electric and diesel fire water pumps.",
+        "compliance_status": "Non-Complied",
+        "risk_category": "HIGH (H)",
+        "recommendation": "Replace butterfly valves on the pump suction header with listed Outside Screw and Yoke (OS&Y) gate valves to ensure an unobstructed flow path and prevent cavitation.",
+        "standard_reference": "NFPA 20 Clause 4.16.5.1 & IS 15301",
+        "system_efficacy_context": "Butterfly disc obstructs suction flow and induces turbulence under high flow demand.",
+        "doc_id": "OBS_0001"
+    },
+    {
+        "facility_metadata": {
+            "facility_name": "Facility Alpha (Industrial Manufacturing)",
+            "hazard_classification": "Group G-2 (Moderate Hazard Industrial)"
+        },
+        "macro_zone": "Utility",
+        "micro_area": "FIRE WATER PUMP ROOM (LINE-1)",
+        "clean_micro_area": "Fire Water Pump Room",
+        "component": "Y-Strainers",
+        "component_category": "Pump Room Fittings & Piping",
+        "observation": "Y-strainers were not installed on the flooded suction line between the static fire water tank and fire pumps.",
+        "compliance_status": "Non-Complied",
+        "risk_category": "MEDIUM (H)",
+        "recommendation": "Install corrosion-resistant Y-strainers on the suction line of each fire pump set to arrest debris and prevent impeller damage.",
+        "standard_reference": "IS 15301 Clause 3.4.2",
+        "system_efficacy_context": null,
+        "doc_id": "OBS_0002"
+    },
+    {
+        "facility_metadata": {
+            "facility_name": "Facility Alpha (Industrial Manufacturing)",
+            "hazard_classification": "Group G-2 (Moderate Hazard Industrial)"
+        },
+        "macro_zone": "Utility",
+        "micro_area": "DIESEL GENERATOR ROOM (1500 KVA)",
+        "clean_micro_area": "DG Room",
+        "component": "Portable Fire Extinguisher (Foam type)",
+        "component_category": "Portable Fire Extinguishers (PFE)",
+        "observation": "Mechanical foam type portable fire extinguishers were not provided near the diesel day tank inside the DG room.",
+        "compliance_status": "Non-Complied",
+        "risk_category": "HIGH (H)",
+        "recommendation": "Provide 9-liter mechanical foam type portable fire extinguishers near the diesel storage area inside the DG room for Class B hydrocarbon fire suppression.",
+        "standard_reference": "IS 2190 Clause 10.4",
+        "system_efficacy_context": null,
+        "doc_id": "OBS_0003"
+    },
+    {
+        "facility_metadata": {
+            "facility_name": "Facility Alpha (Industrial Manufacturing)",
+            "hazard_classification": "Group G-2 (Moderate Hazard Industrial)"
+        },
+        "macro_zone": "Utility",
+        "micro_area": "DIESEL GENERATOR ROOM (1500 KVA)",
+        "clean_micro_area": "DG Room",
+        "component": "Secondary Containment Tank",
+        "component_category": "Secondary Containment & Dykes",
+        "observation": "Diesel day tanks lacked a secondary containment dyke wall capable of holding 110% of tank volume.",
+        "compliance_status": "Non-Complied",
+        "risk_category": "HIGH (H)",
+        "recommendation": "Construct an impervious secondary containment dyke around the diesel day tank with net holding capacity equal to at least 110% of the tank volume.",
+        "standard_reference": "NBC 2016 Part 4 Clause 3.4.6.4",
+        "system_efficacy_context": null,
+        "doc_id": "OBS_0004"
+    },
+    {
+        "facility_metadata": {
+            "facility_name": "Facility Beta (Process Plant)",
+            "hazard_classification": "Group G-3 (High Hazard Industrial)"
+        },
+        "macro_zone": "Utility",
+        "micro_area": "MAIN ELECTRICAL SUBSTATION (33/6.6 KV)",
+        "clean_micro_area": "Electrical Substation",
+        "component": "Automatic Sprinkler System",
+        "component_category": "Automatic Sprinkler Systems",
+        "observation": "Wet-pipe water sprinkler heads were installed directly above energized medium-voltage electrical switchgear panels.",
+        "compliance_status": "Non-Complied",
+        "risk_category": "HIGH (S)",
+        "recommendation": "Remove water-based suppression systems from energized electrical switchgear rooms and provide clean-agent in-panel flooding suppression to eliminate electrocution hazards.",
+        "standard_reference": "NBC 2016 Part 4 Clause 5.1.3(m)",
+        "system_efficacy_context": "Water suppression above energized MV/HV equipment creates severe electrocution and arc-flash risk.",
+        "doc_id": "OBS_0005"
+    },
+    {
+        "facility_metadata": {
+            "facility_name": "Facility Beta (Process Plant)",
+            "hazard_classification": "Group G-3 (High Hazard Industrial)"
+        },
+        "macro_zone": "Utility",
+        "micro_area": "MCC PANEL ROOM (LINE-2)",
+        "clean_micro_area": "Electrical Panel / MCC Room",
+        "component": "Automatic Fire Detection & Alarm System",
+        "component_category": "Fire Detection & Alarm Systems (FDAS)",
+        "observation": "Point smoke detectors were not installed inside ceiling bays formed by structural beams exceeding 10% of ceiling height.",
+        "compliance_status": "Partially Complied",
+        "risk_category": "MEDIUM (H)",
+        "recommendation": "Relocate and add smoke detectors inside each structural beam pocket exceeding 10% of overall ceiling height to eliminate dead-air detection zones.",
+        "standard_reference": "IS 2189 Clause 6.3.2(f)",
+        "system_efficacy_context": "Deep ceiling beams trap rising smoke plumes, delaying detector actuation.",
+        "doc_id": "OBS_0006"
+    },
+    {
+        "facility_metadata": {
+            "facility_name": "Facility Beta (Process Plant)",
+            "hazard_classification": "Group G-3 (High Hazard Industrial)"
+        },
+        "macro_zone": "Storage",
+        "micro_area": "FINISHED GOODS WAREHOUSE",
+        "clean_micro_area": "Warehouse & Storage",
+        "component": "Automatic Fire Sprinkler System",
+        "component_category": "Automatic Sprinkler Systems",
+        "observation": "High-piled storage racks exceeding 4.2 meters in height lacked in-rack automatic sprinkler protection.",
+        "compliance_status": "Non-Complied",
+        "risk_category": "HIGH (H)",
+        "recommendation": "Install in-rack automatic fire sprinklers compliant with hazard density calculations where combustible rack storage exceeds 3.7 meters.",
+        "standard_reference": "IS 15105 & NFPA 13",
+        "system_efficacy_context": null,
+        "doc_id": "OBS_0007"
+    },
+    {
+        "facility_metadata": {
+            "facility_name": "Facility Beta (Process Plant)",
+            "hazard_classification": "Group G-3 (High Hazard Industrial)"
+        },
+        "macro_zone": "Process",
+        "micro_area": "PRODUCTION HANGAR (LINE-1)",
+        "clean_micro_area": "Production Hangar",
+        "component": "Beam Detector",
+        "component_category": "Fire Detection & Alarm Systems (FDAS)",
+        "observation": "Point-type optical smoke detectors were installed at a 14-meter shed ceiling height where stratification prevents reliable response.",
+        "compliance_status": "Non-Complied",
+        "risk_category": "MEDIUM (H)",
+        "recommendation": "Replace point smoke detectors in ceilings exceeding 10 meters with projected optical beam detectors or aspirating smoke detection systems.",
+        "standard_reference": "IS 2189 Clause 6.3.3(a)",
+        "system_efficacy_context": "Point smoke detectors are disqualified above 10 m ceiling height under IS 2189.",
+        "doc_id": "OBS_0008"
+    },
+    {
+        "facility_metadata": {
+            "facility_name": "Facility Gamma (Commercial Office)",
+            "hazard_classification": "Group E (Business Building)"
+        },
+        "macro_zone": "Admin",
+        "micro_area": "ADMIN OFFICE BLOCK",
+        "clean_micro_area": "Admin / Office Building",
+        "component": "Automatic Fire Detection & Alarm System",
+        "component_category": "Fire Detection & Alarm Systems (FDAS)",
+        "observation": "Concealed false ceiling voids measuring 950 mm in depth lacked above-ceiling smoke detectors.",
+        "compliance_status": "Partially Complied",
+        "risk_category": "MEDIUM (S)",
+        "recommendation": "Install concealed smoke detectors with external response indicators above false ceilings wherever void depth exceeds 800 mm.",
+        "standard_reference": "IS 2189 Clause 6.3.2(t)",
+        "system_efficacy_context": "Concealed cable trays above 800 mm voids remain unmonitored.",
+        "doc_id": "OBS_0009"
+    },
+    {
+        "facility_metadata": {
+            "facility_name": "Facility Gamma (Commercial Office)",
+            "hazard_classification": "Group E (Business Building)"
+        },
+        "macro_zone": "Utility",
+        "micro_area": "BATTERY & UPS ROOM",
+        "clean_micro_area": "Battery / UPS Room",
+        "component": "Hydrogen Detection System",
+        "component_category": "Gas Leak Detection Systems",
+        "observation": "No hydrogen gas leak detection system was installed in the enclosed VRLA battery charging room.",
+        "compliance_status": "Non-Complied",
+        "risk_category": "HIGH (S)",
+        "recommendation": "Install ceiling-mounted hydrogen (H2) gas leak detectors interlocked with mechanical exhaust ventilation in the battery room.",
+        "standard_reference": "NFPA 2 Annex L",
+        "system_efficacy_context": null,
+        "doc_id": "OBS_0010"
+    }
+]
