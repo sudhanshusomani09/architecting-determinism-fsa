@@ -1,0 +1,62 @@
+@startuml
+scale 2
+left to right direction
+
+<style>
+document { BackgroundColor #FFFFFF }
+rectangle { FontName SansSerif; FontSize 14; BackgroundColor #F8F9F9; BorderColor #2C3E50; RoundCorner 8 }
+component { FontName SansSerif; FontSize 13; BackgroundColor #FFFFFF; BorderColor #2C3E50; RoundCorner 6 }
+database { FontName SansSerif; FontSize 13; BackgroundColor #D1F2EB; BorderColor #117A65 }
+actor { FontName SansSerif; FontSize 13 }
+arrow { FontName SansSerif; FontSize 12; LineColor #2C3E50 }
+</style>
+
+rectangle "Zone 1: Human-in-the-Loop Operations" as Z1 {
+  actor "Audit Engineer" as Engineer
+  component "Unified Project Dashboard\n(Streamlit UI)" as UI
+  Engineer --> UI : Interacts across all 9 Services
+}
+
+rectangle "Zone 6: Output & Quality Assurance" as Z6 {
+  component "Delivery Generator Agent\n(Docx, Excel, CAD)" as Deliv
+  component "Quality Assurance Agent\n(Dual-Pass Auditor)" as QA
+  Deliv --> QA : Sends Drafts
+  QA --> UI : Flags / Approves Final Output
+}
+
+rectangle "Zone 2: Core Orchestration" as Z2 {
+  component "Supervisor / Orchestrator Agent\n(LangGraph State Manager)" as Orch
+  UI --> Orch : Triggers Project Workflows
+  Orch --> Deliv : Triggers Compilation
+}
+
+rectangle "Zone 3: Intake & Scoping" as Z3 {
+  component "Intake Agent\n(Prerequisite Matrix Checker)" as Intake
+  component "File Parser\n(DWG, PDF, Excel Reader)" as Parser
+  Orch --> Intake : Validates Scope
+  Intake --> Parser : Extracts Client Files
+}
+
+rectangle "Zone 4: Compute & Engineering (The Brain)" as Z4 {
+  component "DB Retrieval Agent\n(Metadata Search)" as DBRet
+  component "Fire Engineering Agent\n(Statutory Interpreter)" as FireEng
+  component "Python Deterministic Solvers\n(Hydraulics, Fire Load Math)" as Solvers
+  Orch --> DBRet : Requests Context
+  Orch --> FireEng : Delegates Analysis
+  FireEng <--> Solvers : Offloads Hard Math
+}
+
+rectangle "Zone 5: Storage & Knowledge Base" as Z5 {
+  database "Transaction & Feedback Logs" as Logs
+  database "Legacy Audit Projects\n(Vector / JSON)" as LegacyDB
+  database "Statutory Code Base\n(IS, NFPA, NBC)" as CodeDB
+  QA --> Logs : Logs Errors for Future Training
+  DBRet <--> LegacyDB : Semantic Matching
+  FireEng <--> CodeDB : Statutory Lookups
+}
+
+rectangle "Zone 7: Offline Capabilities" as Z7 {
+  component "Training Agent\n(Asynchronous Mentor)" as Train
+  Logs --> Train : Feeds offline learning
+}
+@enduml

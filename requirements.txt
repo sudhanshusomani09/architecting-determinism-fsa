@@ -1,0 +1,24 @@
+# Core Data Contracts & Environment
+pydantic>=2.6.0
+python-dotenv>=1.0.0
+numpy>=1.26.0
+pandas>=2.2.0
+
+# Iteration 2: Hybrid Retrieval, Reranking & UI
+rank-bm25>=0.2.2
+sentence-transformers>=3.0.0
+streamlit>=1.35.0
+
+# Document Parsing & Deterministic Word (.docx) Generation
+python-docx>=1.1.0
+docxtpl>=0.18.0
+Pillow>=10.0.0
+beautifulsoup4>=4.12.0
+lxml>=5.2.0
+
+# Optional Cloud LLM & Iteration 1 GraphRAG Archive
+google-genai>=1.0.0
+neo4j>=5.20.0
+
+# Testing & Verification
+pytest>=8.0.0

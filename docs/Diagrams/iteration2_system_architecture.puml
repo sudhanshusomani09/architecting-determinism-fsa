@@ -1,0 +1,73 @@
+@startuml
+scale 2
+title Fire Safety Audit Report Generation - System Architecture
+
+<style>
+document { BackgroundColor #FFFFFF }
+title { FontName SansSerif; FontSize 18; FontStyle bold }
+rectangle { FontName SansSerif; FontSize 14; RoundCorner 8 }
+component { FontName SansSerif; FontSize 13; BackgroundColor #FFFFFF; BorderColor #2C3E50; RoundCorner 6 }
+database { FontName SansSerif; FontSize 13; BackgroundColor #FFFFFF; BorderColor #2C3E50 }
+artifact { FontName SansSerif; FontSize 13; BackgroundColor #FFFFFF; BorderColor #2C3E50 }
+arrow { FontName SansSerif; FontSize 12; LineColor #2C3E50 }
+</style>
+
+top to bottom direction
+
+rectangle "Zone 1: Data Ingestion & ETL (Offline / Colab)" as Z1 #E8F8F5 {
+  database "Raw Audit PDFs" as RawPDF
+  component "Gemini API Extractor\n(Strict JSON Schema)" as Extractor
+  database "Raw Master JSON" as RawJSON
+  component "Phase 2: Semantic Cleaner\n(Regex + Area Clustering)" as Cleaner
+  database "Routed Master JSON" as RoutedJSON
+
+  RawPDF --> Extractor
+  Extractor --> RawJSON : Structured Extraction
+  RawJSON --> Cleaner : Normalization
+  Cleaner --> RoutedJSON : Ready for UI
+}
+
+rectangle "Zone 3: Presentation & Delta-Edit (Frontend)" as Z3 #EBF5FB {
+  portin "Streamlit User Interface" as UI
+  component "Guided Area Audit (Tab 1)" as Tab1
+  component "Deep Search (Tab 2)" as Tab2
+  component "Delta-Edit Logger\n(Auto-fill Modal)" as Delta
+
+  UI --> Tab1
+  UI --> Tab2
+  Tab1 --> Delta : Customize & Add
+  Tab2 --> Delta : Customize & Add
+}
+
+rectangle "Zone 2: AI Search Core (Streamlit Backend)" as Z2 #FEF9E7 {
+  component "Jargon Expander\n(Dictionary Intercept)" as Jargon
+  component "BM25 Okapi Algorithm\n(Keyword Brain)" as BM25
+  component "MiniLM-L6-v2 Model\n(Vector / Semantic Brain)" as Vector
+  component "Reciprocal Rank Fusion (RRF)\n(Math Combiner)" as RRF
+  component "Deduplication Sieve" as Dedup
+
+  Jargon --> BM25 : Expanded Query
+  Jargon --> Vector : Expanded Query
+  BM25 --> RRF : Ranks (1 to N)
+  Vector --> RRF : Ranks (1 to N)
+  RRF --> Dedup : Fused Top Results
+}
+
+rectangle "Zone 4: Session Memory & Export" as Z4 #FDEDEC {
+  database "Report Queue (Session State)" as Queue
+  artifact "Consultancy_Master_Template.docx" as Template
+  component "DocxTpl Engine" as DocxEngine
+  artifact "Final Word Report" as FinalDoc
+
+  Queue --> DocxEngine : Triggers Compilation
+  Template --> DocxEngine : Formatting Rules
+  DocxEngine --> FinalDoc : Generates
+}
+
+RoutedJSON --> BM25 : Builds TF-IDF Index
+RoutedJSON --> Vector : Generates Embeddings
+Tab1 --> Jargon : Search Query
+Tab2 --> Jargon : Search Query
+Dedup --> UI : Unique Results Displayed
+Delta --> Queue : Saves Edited Item
+@enduml
